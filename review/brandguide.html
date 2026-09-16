@@ -1,0 +1,352 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><title>Auguste Viktoria Immobilien — Brand Guide</title><style>
+@font-face { font-family:'Cinzel'; src:url('file:///home/user/Prototyp/AV-Brand-Kit/07_Fonts/Cinzel-Variable.ttf'); }
+@font-face { font-family:'Montserrat'; src:url('file:///home/user/Prototyp/AV-Brand-Kit/07_Fonts/Montserrat-Variable.ttf'); }
+@page { size: A4 landscape; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: Montserrat, Arial, sans-serif; color: #062014; }
+.page {
+  width: 297mm; height: 210mm; page-break-after: always; position: relative;
+  padding: 16mm 18mm 14mm; background: #FFFFFF; overflow: hidden;
+}
+.page:last-child { page-break-after: auto; }
+.page.dark { background: #062014; color: #EBE1CC; }
+.page.cream { background: #EBE1CC; }
+h1 { font-family: Cinzel, serif; font-weight: 600; font-size: 22pt; letter-spacing: .02em; }
+h2 { font-family: Cinzel, serif; font-weight: 600; font-size: 14pt; margin-bottom: 4mm; }
+h3 { font-size: 8pt; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+      color: #D1A976; margin-bottom: 2.5mm; }
+p  { font-size: 9.2pt; line-height: 1.6; max-width: 150mm; }
+.small { font-size: 7.6pt; line-height: 1.5; color: #5A6A60; }
+.dark .small { color: #9FB3A6; }
+.rule { height: .35mm; background: #D1A976; margin: 4mm 0 6mm; }
+.folio { position: absolute; bottom: 8mm; left: 18mm; right: 18mm;
+          display: flex; justify-content: space-between;
+          font-size: 7pt; letter-spacing: .12em; color: #8A9A90; }
+.dark .folio { color: #6E8377; }
+.grid { display: grid; gap: 5mm; }
+.g2 { grid-template-columns: repeat(2, 1fr); }
+.g3 { grid-template-columns: repeat(3, 1fr); }
+.g4 { grid-template-columns: repeat(4, 1fr); }
+.tile { border: .25mm solid #D9E0DB; border-radius: 1mm; padding: 4mm;
+         display: flex; flex-direction: column; align-items: center;
+         justify-content: center; min-height: 34mm; }
+.tile.on-green { background: #062014; border-color: transparent; }
+.tile.on-cream { background: #EBE1CC; border-color: transparent; }
+.tile img { max-width: 100%; max-height: 26mm; object-fit: contain; }
+.cap { font-size: 6.6pt; letter-spacing: .1em; text-transform: uppercase;
+        color: #7B8C82; margin-top: 3mm; text-align: center; }
+.on-green .cap, .on-cream .cap { color: #8FA396; }
+.on-cream .cap { color: #6B7A70; }
+table { border-collapse: collapse; width: 100%; font-size: 8.4pt; }
+th, td { text-align: left; padding: 2.4mm 3mm; border-bottom: .2mm solid #E2E8E4; }
+th { font-size: 7pt; letter-spacing: .12em; text-transform: uppercase;
+      color: #D1A976; font-weight: 600; }
+td.mono { font-family: 'DejaVu Sans Mono', monospace; font-size: 7.8pt; }
+.sw { width: 9mm; height: 9mm; border-radius: 1mm; border: .2mm solid rgba(0,0,0,.12);
+       display: inline-block; vertical-align: middle; }
+.dd { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; align-items: start; }
+.dd img { width: 100%; display: block; border-radius: 1mm; }
+.tag { font-size: 6.6pt; font-weight: 700; letter-spacing: .14em; padding: .8mm 2.4mm;
+        border-radius: .8mm; color: #fff; display: inline-block; margin-bottom: 1.6mm; }
+.ok { background: #2E7D53; }
+.no { background: #B4231F; }
+.ddrow { margin-bottom: 4mm; }
+.ddtitle { font-size: 8.6pt; font-weight: 600; margin-bottom: 1.6mm; }
+.ddwhy { font-size: 7.2pt; color: #6B7A70; margin-bottom: 2.4mm; }
+.clear { position: relative; display: inline-block; }
+.clear .box { position: absolute; inset: 0; border: .4mm dashed #D1A976; }
+.note { background: #FFF6E8; border-left: 1mm solid #D1A976;
+         padding: 3mm 4mm; font-size: 7.6pt; line-height: 1.55; margin-top: 5mm; }
+.dark .note { background: rgba(209,169,118,.10); }
+.spec { font-size: 7.8pt; line-height: 1.75; }
+.spec b { font-weight: 600; }
+</style></head><body><section class="page dark">
+      <div style="height:100%;display:flex;flex-direction:column;
+                  align-items:center;justify-content:center;">
+        <img src="file:///home/user/Prototyp/AV-Brand-Kit/01_Logo/PNG/AV_stacked_tagline_full-dark_3000px.png" style="width:118mm">
+        <div style="margin-top:14mm;font-size:8pt;letter-spacing:.34em;
+                    color:#D1A976;">B R A N D &nbsp; G U I D E</div>
+        <div style="margin-top:3mm;font-size:7pt;letter-spacing:.2em;color:#8FA396;">
+          VERSION 1.0</div>
+      </div><div class="folio"><span>AUGUSTE VIKTORIA IMMOBILIEN · BRAND GUIDE</span><span>Cover · 01</span></div></section><section class="page ">
+      <h1>The mark</h1><div class="rule"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12mm;">
+        <div>
+          <p>Three things carry the brand, and they always appear together in the
+          monogram: the <b>A and V</b>, set in Cinzel and overlapped so they read as
+          one shape; the <b>mountain ridge</b>, a single gold line rising from the A's
+          apex; and the <b>peacock feather</b>, whose quill follows the V's right
+          stroke.</p>
+          <p style="margin-top:4mm">The feather is the only ornament. It carries the
+          one flash of colour in the identity and it earns that by being the only
+          thing in the mark that is not a letter or a line. Everything else is
+          cream, gold and the deep forest green the whole system sits on.</p>
+          <p style="margin-top:4mm">Cinzel gives the name its Roman capitals.
+          Montserrat carries IMMOBILIEN and the tagline, letterspaced wide so the
+          two typefaces never compete.</p>
+          <div class="note"><b>The one rule that matters.</b> The logo is artwork,
+          not a layout. Place it, scale it proportionally, and leave it alone.</div>
+        </div>
+        <div class="tile on-green" style="min-height:0;height:118mm;">
+          <img src="file:///home/user/Prototyp/AV-Brand-Kit/01_Logo/PNG/AV_monogram_full-dark_3000px.png" style="max-height:100mm">
+        </div>
+      </div><div class="folio"><span>AUGUSTE VIKTORIA IMMOBILIEN · BRAND GUIDE</span><span>The mark · 02</span></div></section><section class="page ">
+      <h1>Seven layouts</h1><div class="rule"></div>
+      <p style="margin-bottom:5mm">Pick by the space you have, not by preference.
+      Stacked is the default. Horizontal is for headers and anything wider than it is
+      tall. The monogram alone is for avatars, favicons and stamps.</p>
+      <div class="grid g4"><div class="tile on-green"><img src="file:///home/user/Prototyp/AV-Brand-Kit/01_Logo/PNG/AV_stacked_full-dark_3000px.png"><div class="cap">stacked</div></div><div class="tile on-green"><img src="file:///home/user/Prototyp/AV-Brand-Kit/01_Logo/PNG/AV_stacked_tagline_full-dark_3000px.png"><div class="cap">stacked tagline</div></div><div class="tile on-green"><img src="file:///home/user/Prototyp/AV-Brand-Kit/01_Logo/PNG/AV_horizontal_full-dark_3000px.png"><div class="cap">horizontal</div></div><div class="tile on-green"><img src="file:///home/user/Prototyp/AV-Brand-Kit/01_Logo/PNG/AV_horizontal_tagline_full-dark_3000px.png"><div class="cap">horizontal tagline</div></div><div class="tile on-green"><img src="file:///home/user/Prototyp/AV-Brand-Kit/01_Logo/PNG/AV_monogram_full-dark_3000px.png"><div class="cap">monogram</div></div><div class="tile on-green"><img src="file:///home/user/Prototyp/AV-Brand-Kit/01_Logo/PNG/AV_monogram_simple_full-dark_3000px.png"><div class="cap">monogram simple</div></div><div class="tile on-green"><img src="file:///home/user/Prototyp/AV-Brand-Kit/01_Logo/PNG/AV_wordmark_full-dark_3000px.png"><div class="cap">wordmark</div></div></div><div class="folio"><span>AUGUSTE VIKTORIA IMMOBILIEN · BRAND GUIDE</span><span>Layouts · 03</span></div></section><section class="page ">
+      <h1>Clear space and minimum size</h1><div class="rule"></div>
+      <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:12mm;">
+        <div>
+          <h3>Clear space</h3>
+          <p>Keep a margin of <b>X</b> on all four sides, where X is the cap height of
+          the A in AUGUSTE. Nothing enters that band: no type, no rule, no photo edge,
+          no other logo. Every supplied file already has X baked into its viewBox, so
+          placing the file flush against a box still leaves the margin standing.</p>
+          <div class="tile on-green" style="margin-top:5mm;min-height:72mm;">
+            <div class="clear">
+              <img src="file:///home/user/Prototyp/AV-Brand-Kit/01_Logo/PNG/AV_stacked_full-dark_3000px.png" style="max-height:52mm">
+              <div class="box"></div>
+            </div>
+          </div>
+          <div class="cap" style="text-align:left;margin-top:2mm">
+            dashed line = the edge of the supplied file, X beyond the artwork</div>
+        </div>
+        <div>
+          <h3>Minimum size</h3>
+          <table><tr><th>Layout</th><th>Print</th><th>Screen</th></tr><tr><td>stacked</td><td class='mono'>25 mm</td><td class='mono'>120 px</td></tr><tr><td>stacked tagline</td><td class='mono'>30 mm</td><td class='mono'>150 px</td></tr><tr><td>horizontal</td><td class='mono'>40 mm</td><td class='mono'>180 px</td></tr><tr><td>horizontal tagline</td><td class='mono'>45 mm</td><td class='mono'>200 px</td></tr><tr><td>monogram</td><td class='mono'>8 mm</td><td class='mono'>32 px</td></tr><tr><td>monogram simple</td><td class='mono'>8 mm</td><td class='mono'>32 px</td></tr><tr><td>wordmark</td><td class='mono'>30 mm</td><td class='mono'>140 px</td></tr></table>
+          <div class="note">Below 64 px, swap to <b>monogram simple</b>. The
+          multicolour feather turns to mud at that size; the one-colour silhouette
+          keeps the eye readable.</div>
+        </div>
+      </div><div class="folio"><span>AUGUSTE VIKTORIA IMMOBILIEN · BRAND GUIDE</span><span>Clear space · 04</span></div></section><section class="page ">
+      <h1>Six colour modes</h1><div class="rule"></div>
+      <p style="margin-bottom:5mm">Two full-colour modes and four single-colour ones.
+      The single-colour modes exist for embossing, engraving, stamps, fax-grade print
+      and anywhere a second ink costs money. They are not a style choice.</p>
+      <div class="grid g3"><div class="tile on-green"><img src="file:///home/user/Prototyp/AV-Brand-Kit/01_Logo/PNG/AV_stacked_full-dark_3000px.png"><div class="cap">full-dark</div></div><div class="tile on-cream"><img src="file:///home/user/Prototyp/AV-Brand-Kit/01_Logo/PNG/AV_stacked_full-light_3000px.png"><div class="cap">full-light</div></div><div class="tile on-green"><img src="file:///home/user/Prototyp/AV-Brand-Kit/01_Logo/PNG/AV_stacked_1c-cream_3000px.png"><div class="cap">1c-cream</div></div><div class="tile on-green"><img src="file:///home/user/Prototyp/AV-Brand-Kit/01_Logo/PNG/AV_stacked_1c-white_3000px.png"><div class="cap">1c-white</div></div><div class="tile on-cream"><img src="file:///home/user/Prototyp/AV-Brand-Kit/01_Logo/PNG/AV_stacked_1c-black_3000px.png"><div class="cap">1c-black</div></div><div class="tile on-green"><img src="file:///home/user/Prototyp/AV-Brand-Kit/01_Logo/PNG/AV_stacked_1c-gold_3000px.png"><div class="cap">1c-gold</div></div></div>
+      <table style="margin-top:6mm">
+        <tr><th>Mode</th><th>Letters</th><th>Ridge, rules, tagline</th>
+            <th>Feather</th><th>Intended background</th></tr>
+        <tr><td>full-dark</td><td>cream</td><td>gold</td><td>peacock / teal / gold</td>
+            <td>green</td></tr>
+        <tr><td>full-light</td><td>green</td><td>gold</td><td>peacock / teal / gold</td>
+            <td>white or cream</td></tr>
+        <tr><td>1c-cream</td><td>cream</td><td>cream</td><td>silhouette</td>
+            <td>dark</td></tr>
+        <tr><td>1c-white</td><td>white</td><td>white</td><td>silhouette</td>
+            <td>dark</td></tr>
+        <tr><td>1c-black</td><td>black</td><td>black</td><td>silhouette</td>
+            <td>light</td></tr>
+        <tr><td>1c-gold</td><td>gold</td><td>gold</td><td>silhouette</td>
+            <td>either</td></tr>
+      </table><div class="folio"><span>AUGUSTE VIKTORIA IMMOBILIEN · BRAND GUIDE</span><span>Colour modes · 05</span></div></section><section class="page ">
+          <h1>Do and don't</h1><div class="rule"></div>
+          <div class="grid g2">
+              <div class="ddrow">
+                <div class="ddtitle">Do not stretch or squash</div>
+                <div class="ddwhy">Scale the logo proportionally, always.</div>
+                <div class="dd">
+                  <div><span class="tag no">DON'T</span>
+                    <img src="file:///home/user/Prototyp/review/dodont/1_dont.png"></div>
+                  <div><span class="tag ok">DO</span>
+                    <img src="file:///home/user/Prototyp/review/dodont/1_do.png"></div>
+                </div>
+              </div>
+              <div class="ddrow">
+                <div class="ddtitle">Do not recolour</div>
+                <div class="ddwhy">Use one of the six supplied colour modes.</div>
+                <div class="dd">
+                  <div><span class="tag no">DON'T</span>
+                    <img src="file:///home/user/Prototyp/review/dodont/2_dont.png"></div>
+                  <div><span class="tag ok">DO</span>
+                    <img src="file:///home/user/Prototyp/review/dodont/2_do.png"></div>
+                </div>
+              </div>
+              <div class="ddrow">
+                <div class="ddtitle">Do not add effects</div>
+                <div class="ddwhy">No drop shadow, glow, bevel or gradient.</div>
+                <div class="dd">
+                  <div><span class="tag no">DON'T</span>
+                    <img src="file:///home/user/Prototyp/review/dodont/3_dont.png"></div>
+                  <div><span class="tag ok">DO</span>
+                    <img src="file:///home/user/Prototyp/review/dodont/3_do.png"></div>
+                </div>
+              </div>
+              <div class="ddrow">
+                <div class="ddtitle">Keep the contrast</div>
+                <div class="ddwhy">Cream on green, green on cream. Never cream on gold.</div>
+                <div class="dd">
+                  <div><span class="tag no">DON'T</span>
+                    <img src="file:///home/user/Prototyp/review/dodont/4_dont.png"></div>
+                  <div><span class="tag ok">DO</span>
+                    <img src="file:///home/user/Prototyp/review/dodont/4_do.png"></div>
+                </div>
+              </div></div><div class="folio"><span>AUGUSTE VIKTORIA IMMOBILIEN · BRAND GUIDE</span><span>Do and don&#x27;t · 06</span></div></section><section class="page ">
+          <h1>Do and don't, continued</h1><div class="rule"></div>
+          <div class="grid g2">
+              <div class="ddrow">
+                <div class="ddtitle">Do not rotate</div>
+                <div class="ddwhy">The logo sits level. No angles, no arcs.</div>
+                <div class="dd">
+                  <div><span class="tag no">DON'T</span>
+                    <img src="file:///home/user/Prototyp/review/dodont/5_dont.png"></div>
+                  <div><span class="tag ok">DO</span>
+                    <img src="file:///home/user/Prototyp/review/dodont/5_do.png"></div>
+                </div>
+              </div>
+              <div class="ddrow">
+                <div class="ddtitle">Do not outline</div>
+                <div class="ddwhy">The mark is solid. Never hollow it out into a keyline.</div>
+                <div class="dd">
+                  <div><span class="tag no">DON'T</span>
+                    <img src="file:///home/user/Prototyp/review/dodont/6_dont.png"></div>
+                  <div><span class="tag ok">DO</span>
+                    <img src="file:///home/user/Prototyp/review/dodont/6_do.png"></div>
+                </div>
+              </div>
+              <div class="ddrow">
+                <div class="ddtitle">Do not sit the logo on a busy area</div>
+                <div class="ddwhy">Place it on a calm field, or use the green panel.</div>
+                <div class="dd">
+                  <div><span class="tag no">DON'T</span>
+                    <img src="file:///home/user/Prototyp/review/dodont/7_dont.png"></div>
+                  <div><span class="tag ok">DO</span>
+                    <img src="file:///home/user/Prototyp/review/dodont/7_do.png"></div>
+                </div>
+              </div>
+              <div class="ddrow">
+                <div class="ddtitle">Respect the minimum size</div>
+                <div class="ddwhy">Below 150 px wide, drop the tagline; below 64 px use the simple monogram.</div>
+                <div class="dd">
+                  <div><span class="tag no">DON'T</span>
+                    <img src="file:///home/user/Prototyp/review/dodont/8_dont.png"></div>
+                  <div><span class="tag ok">DO</span>
+                    <img src="file:///home/user/Prototyp/review/dodont/8_do.png"></div>
+                </div>
+              </div></div><div class="folio"><span>AUGUSTE VIKTORIA IMMOBILIEN · BRAND GUIDE</span><span>Do and don&#x27;t · 07</span></div></section><section class="page ">
+      <h1>Colour</h1><div class="rule"></div>
+      <table><tr><th></th><th>Token</th><th>HEX</th><th>RGB</th>
+        <th>CMYK approx.</th><th>Use</th></tr><tr><td><span class='sw' style='background:#062014'></span></td><td>green</td><td class='mono'>#062014</td><td class='mono'>6 32 20</td><td class='mono'>100 0 100 70</td><td class='small'>primary background, dark-mode base, 1c print on light</td></tr><tr><td><span class='sw' style='background:#EBE1CC'></span></td><td>cream</td><td class='mono'>#EBE1CC</td><td class='mono'>235 225 204</td><td class='mono'>0 5 14 6</td><td class='small'>wordmark/letters on dark</td></tr><tr><td><span class='sw' style='background:#D1A976'></span></td><td>gold</td><td class='mono'>#D1A976</td><td class='mono'>209 169 118</td><td class='mono'>0 22 51 14</td><td class='small'>mountains, rules, tagline, accents</td></tr><tr><td><span class='sw' style='background:#337B56'></span></td><td>peacock</td><td class='mono'>#337B56</td><td class='mono'>51 123 86</td><td class='mono'>100 0 51 41</td><td class='small'>feather body</td></tr><tr><td><span class='sw' style='background:#21897F'></span></td><td>teal</td><td class='mono'>#21897F</td><td class='mono'>33 137 127</td><td class='mono'>100 0 12 37</td><td class='small'>feather eye</td></tr><tr><td><span class='sw' style='background:#FFFFFF'></span></td><td>white</td><td class='mono'>#FFFFFF</td><td class='mono'>255 255 255</td><td class='mono'>0 0 0 0</td><td class='small'>1c-white mode</td></tr><tr><td><span class='sw' style='background:#000000'></span></td><td>black</td><td class='mono'>#000000</td><td class='mono'>0 0 0</td><td class='mono'>0 0 0 100</td><td class='small'>1c-black mode</td></tr></table>
+      <div class="note"><b>Before any print run.</b> The CMYK column is an
+      approximation computed from sRGB, not a measured separation. Proof it in
+      Affinity against Coated FOGRA39. #062014 sits very close to black on
+      uncoated stock — ask the printer whether a spot colour or a rich-black build
+      serves the job better.</div><div class="folio"><span>AUGUSTE VIKTORIA IMMOBILIEN · BRAND GUIDE</span><span>Colour · 08</span></div></section><section class="page ">
+      <h1>Typography</h1><div class="rule"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12mm;">
+        <div>
+          <h3>Cinzel — display</h3>
+          <div style="font-family:Cinzel;font-size:30pt;line-height:1.15;">Aa Vv</div>
+          <div style="font-family:Cinzel;font-size:13pt;letter-spacing:.06em;
+                      margin-top:3mm;">AUGUSTE VIKTORIA</div>
+          <div class="spec" style="margin-top:4mm">
+            <b>Use for</b> the company name, the monogram, headlines and section
+            titles.<br>
+            <b>Never</b> for body copy, captions or anything below 9 pt — the high
+            stroke contrast breaks up.<br>
+            <b>Tracking</b> +2 to +6 % in headlines. Roman capitals only.<br>
+            <b>Licence</b> SIL OFL 1.1, shipped in 07_Fonts.
+          </div>
+        </div>
+        <div>
+          <h3>Montserrat — text</h3>
+          <div style="font-size:30pt;line-height:1.15;font-weight:400;">Aa Vv</div>
+          <div style="font-size:12pt;letter-spacing:.42em;margin-top:3mm;
+                      font-weight:400;">IMMOBILIEN</div>
+          <div style="font-size:8pt;letter-spacing:.3em;margin-top:3mm;font-weight:300;
+                      color:#D1A976;">MEHR ALS NUR EIN ZUHAUSE</div>
+          <div class="spec" style="margin-top:4mm">
+            <b>Use for</b> IMMOBILIEN, the tagline, body copy, tables, captions, the
+            e-mail signature and every interface label.<br>
+            <b>Weights</b> Light 300 for the tagline, Regular 400 for body,
+            SemiBold 600 for emphasis. Nothing heavier.<br>
+            <b>Tracking</b> 0.45 em on IMMOBILIEN, 0.30 em on the tagline, 0 in body
+            copy.<br>
+            <b>Fallback</b> Arial, then Helvetica, then the system sans.
+          </div>
+        </div>
+      </div>
+      <div class="note">Both faces are SIL OFL 1.1: free to use, embed and
+      redistribute, including commercially. The licence text ships next to the fonts
+      and must travel with them.</div><div class="folio"><span>AUGUSTE VIKTORIA IMMOBILIEN · BRAND GUIDE</span><span>Typography · 09</span></div></section><section class="page ">
+      <h1>Imagery</h1><div class="rule"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10mm;">
+        <div>
+          <p>Photography is calm, wide and unpeopled. Architecture at golden hour,
+          deep green planting, soft haze on distance. Grade towards forest green,
+          cream and gold; pull saturation down rather than up.</p>
+          <div class="spec" style="margin-top:4mm">
+            <b>Always</b> leave one third of the frame quiet for type.<br>
+            <b>Never</b> a stock-looking handshake, a key close-up, or a sky
+            oversaturated into cyan.<br>
+            <b>Watermark</b> with the monogram at 9 % opacity, bottom-right, never
+            across the subject.
+          </div>
+          <div class="note"><b>Placeholder.</b> The backgrounds in this kit were
+          generated procedurally from the brand tokens, not photographed. Replace them
+          with real photography before launch; the prompts to commission or generate
+          them are in <span class="mono">assets/inbox/README.txt</span>.</div>
+        </div>
+        <div>
+          <img src="file:///home/user/Prototyp/AV-Brand-Kit/06_Web/hero_1920x800.jpg"
+               style="width:100%;border-radius:1mm">
+          <div class="cap" style="text-align:left">hero_1920x800 — left third kept
+            clear for the headline</div>
+          <img src="file:///home/user/Prototyp/AV-Brand-Kit/03_Social/instagram_post_1080.png"
+               style="width:52%;margin-top:4mm;border-radius:1mm">
+          <div class="cap" style="text-align:left">instagram post template</div>
+        </div>
+      </div><div class="folio"><span>AUGUSTE VIKTORIA IMMOBILIEN · BRAND GUIDE</span><span>Imagery · 10</span></div></section><section class="page ">
+      <h1>Applications</h1><div class="rule"></div>
+      <div class="grid g4">
+        <div class="tile"><img src="file:///home/user/Prototyp/review/dodont/2_do.png">
+          <div class="cap">primary lockup</div></div>
+        <div class="tile"><img src="file:///home/user/Prototyp/AV-Brand-Kit/02_Favicon/icon-512.png">
+          <div class="cap">favicon / app icon</div></div>
+        <div class="tile"><img src="file:///home/user/Prototyp/AV-Brand-Kit/03_Social/profile_1080.png">
+          <div class="cap">social profile</div></div>
+        <div class="tile"><img src="file:///home/user/Prototyp/AV-Brand-Kit/05_Templates/email/banner_1200x400.png">
+          <div class="cap">e-mail banner</div></div>
+        <div class="tile"><img src="file:///home/user/Prototyp/AV-Brand-Kit/03_Social/linkedin_banner_1584x396.png">
+          <div class="cap">linkedin banner</div></div>
+        <div class="tile"><img src="file:///home/user/Prototyp/AV-Brand-Kit/06_Web/og_1200x630.png">
+          <div class="cap">open graph card</div></div>
+        <div class="tile"><img src="file:///home/user/Prototyp/AV-Brand-Kit/03_Social/instagram_story_1080x1920.png"
+             style="max-height:30mm"><div class="cap">story template</div></div>
+        <div class="tile"><img src="file:///home/user/Prototyp/AV-Brand-Kit/03_Social/google_business_cover_1024x576.png">
+          <div class="cap">google business</div></div>
+      </div>
+      <div class="note">Print items — Visitenkarte, Briefpapier, Exposé cover,
+      Verkaufsschild and the two Stempel — live in <b>04_Print</b> as RGB previews.
+      They carry a red NOT FOR PRINT bar until the client data is filled in.</div><div class="folio"><span>AUGUSTE VIKTORIA IMMOBILIEN · BRAND GUIDE</span><span>Applications · 11</span></div></section><section class="page ">
+      <h1>What is where</h1><div class="rule"></div>
+      <table>
+        <tr><th>Folder</th><th>Contents</th><th>Reach for it when</th></tr>
+        <tr><td>00_Master</td><td>tokens.json, AV_master.svg, 42 layout SVGs</td>
+            <td>you are changing the artwork itself</td></tr>
+        <tr><td>01_Logo</td><td>SVG · PDF · EPS · PNG 1000/3000 · JPG — 238 files</td>
+            <td>every normal use of the logo</td></tr>
+        <tr><td>02_Favicon</td><td>ico, PNG set, webmanifest, head snippet</td>
+            <td>a browser tab or an installed web app</td></tr>
+        <tr><td>03_Social</td><td>eight platform sizes</td>
+            <td>a profile, banner or post template</td></tr>
+        <tr><td>04_Print</td><td>mm-accurate SVG + RGB-preview PDF, README_PDFX4</td>
+            <td>anything going to a printer</td></tr>
+        <tr><td>05_Templates</td><td>dotx, potx, docx, pptx, e-mail signature</td>
+            <td>a letter, an invoice, a deck or a signature</td></tr>
+        <tr><td>06_Web</td><td>header SVGs, hero, OG card, 9 % watermark</td>
+            <td>the website</td></tr>
+        <tr><td>07_Fonts</td><td>Cinzel + Montserrat variable TTF, both OFL texts</td>
+            <td>installing the faces or handing them to a supplier</td></tr>
+        <tr><td>08_Brandguide</td><td>this document</td>
+            <td>briefing anyone who will touch the brand</td></tr>
+        <tr><td>09_Motion</td><td>MP4 and WebM logo intro</td>
+            <td>a video sting</td></tr>
+      </table>
+      <div class="note"><b>Three-line rule of thumb.</b>
+      On green, use <b>full-dark</b>. On white or cream, use <b>full-light</b>.
+      One ink, embossing or anything under 64 px, use a <b>1c</b> mode and the
+      <b>simple monogram</b>.</div><div class="folio"><span>AUGUSTE VIKTORIA IMMOBILIEN · BRAND GUIDE</span><span>File index · 12</span></div></section></body></html>
