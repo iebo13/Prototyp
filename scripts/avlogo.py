@@ -56,6 +56,9 @@ PARAMS = {
 
     # --- feather placement: quill on the V's right stroke, eye up and to the right
     "feather": {"quill": (494.0, 572.0), "tip": (678.0, 306.0), "extra_rot": 0.0},
+    # In 1-colour modes the feather and the V are the same colour, so the silhouette
+    # is nudged clear of the V's right stroke instead of sitting on it.
+    "feather_simple": {"quill": (528.0, 566.0), "tip": (700.0, 318.0), "extra_rot": 0.0},
 
     # --- wordmark AUGUSTE VIKTORIA (Cinzel, large initials + small caps)
     "wordmark": {
@@ -188,19 +191,19 @@ def mountains() -> str:
     return "\n".join(out)
 
 
-def _feather_transform() -> str:
+def _feather_transform(key: str = "feather") -> str:
     """Map the feather's local quill->tip axis onto the placement in PARAMS."""
     import build_feather as bf  # local coords live with the generator
 
     lq, lt = bf.P0, bf.P3
-    tq = PARAMS["feather"]["quill"]
-    tt = PARAMS["feather"]["tip"]
+    tq = PARAMS[key]["quill"]
+    tt = PARAMS[key]["tip"]
     lvec = (lt[0] - lq[0], lt[1] - lq[1])
     tvec = (tt[0] - tq[0], tt[1] - tq[1])
     scale = math.hypot(*tvec) / math.hypot(*lvec)
     rot = (math.degrees(math.atan2(tvec[1], tvec[0]))
            - math.degrees(math.atan2(lvec[1], lvec[0]))
-           + PARAMS["feather"]["extra_rot"])
+           + PARAMS[key]["extra_rot"])
     return (f'translate({f(tq[0])} {f(tq[1])}) rotate({rot:.2f}) '
             f'scale({scale:.5f}) translate({f(-lq[0])} {f(-lq[1])})')
 
@@ -217,13 +220,16 @@ def _inner_svg(path: pathlib.Path) -> str:
 
 
 def feather(mode: str) -> str:
+    """In 1-colour modes the feather and the letters share a colour, so the
+    silhouette is placed clear of the V's right stroke rather than across it."""
     one_colour = MODES[mode]["feather"] != "full"
     src = ROOT / ("assets/feather_1c.svg" if one_colour else "assets/feather.svg")
     body = _inner_svg(src)
     if one_colour:
         body = body.replace('fill="currentColor"', 'class="c-letter"')
         body = body.replace('stroke="currentColor"', 'class="c-letter-s"')
-    return (f'    <g id="feather" transform="{_feather_transform()}">\n'
+    key = "feather_simple" if one_colour else "feather"
+    return (f'    <g id="feather" transform="{_feather_transform(key)}">\n'
             f'{body}\n    </g>')
 
 

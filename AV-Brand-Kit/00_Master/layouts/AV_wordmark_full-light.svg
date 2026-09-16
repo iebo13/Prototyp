@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="35.1 530.3 939.4 256.8" width="939.4" height="256.8" id="AV_wordmark_full-light">
+  <title>Auguste Viktoria Immobilien — wordmark, full-light</title>
+  <desc>Clear space 63 units (cap height of the wordmark A) on all four sides, baked into the viewBox. Minimum size 30 mm / 140 px. Transparent by design — never add a background to this file.</desc>
+  <style>
+    .c-letter{fill:#062014;stroke:none}
+    .c-letter-s{stroke:#062014;fill:none}
+    .c-accent{fill:#D1A976;stroke:none}
+    .c-accent-t{fill:#D1A976;stroke:none}
+    .c-accent-s{stroke:#D1A976;fill:none}
+    .f-body{fill:#337B56}
+    .f-barb{stroke:#337B56;fill:none;stroke-linecap:round}
+    .f-barb-hi{stroke:#21897F;fill:none;stroke-linecap:round}
+    .f-spine{stroke:#D1A976;fill:none;stroke-linecap:round}
+    .f-dark{fill:#062014}
+    .f-gold{fill:#D1A976}
+    .f-teal{fill:#21897F}
+  </style>
+  <g id="wordmark">
+    <text class="c-letter" x="98.98 515.23" y="656.3" font-family="Cinzel" font-size="88.24" xml:space="preserve">AV</text>
+    <text class="c-letter" x="167.02 227.42 288.73 349.13 387.73 436.39 585.74 614.71 666.11 714.77 778.89 831.7 860.67" y="656.3" font-family="Cinzel" font-size="70.3" xml:space="preserve">UGUSTEIKTORIA</text>
+  </g>
+  <g id="subline">
+    <text class="c-accent-t" x="277.09 310.27 368.72 427.18 481.14 531.81 564.99 609.28 642.46 689.85" y="724.1" font-family="Montserrat" font-weight="400" font-size="38.7" xml:space="preserve">IMMOBILIEN</text>
+    <rect class="c-accent" x="133.2" y="708.1" width="107.6" height="3.2"/>
+    <rect class="c-accent" x="756.8" y="708.1" width="108.4" height="3.2"/>
+  </g>
+</svg>
