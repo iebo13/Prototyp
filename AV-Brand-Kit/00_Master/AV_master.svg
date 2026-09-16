@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" id="av-feather">
-  <title>Auguste Viktoria Immobilien — peacock feather</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" id="AV_master">
+  <title>Auguste Viktoria Immobilien — master logo</title>
+  <desc>Live-font master. Never ship this file; export from 00_Master/layouts/ with text converted to paths.</desc>
   <style>
+    .c-letter{fill:#EBE1CC;stroke:none}
+    .c-letter-s{stroke:#EBE1CC;fill:none}
+    .c-accent{fill:#D1A976;stroke:none}
+    .c-accent-t{fill:#D1A976;stroke:none}
+    .c-accent-s{stroke:#D1A976;fill:none}
     .f-body{fill:#337B56}
     .f-barb{stroke:#337B56;fill:none;stroke-linecap:round}
     .f-barb-hi{stroke:#21897F;fill:none;stroke-linecap:round}
@@ -10,7 +16,20 @@
     .f-gold{fill:#D1A976}
     .f-teal{fill:#21897F}
   </style>
-  <g id="feather-plume">
+  <g id="monogram">
+    <g transform="translate(411.9 0) scale(1.0863 1) translate(-411.9 0)">
+      <text class="c-letter" x="287.97" y="514.4" font-family="Cinzel" font-size="349.58">A</text>
+    </g>
+    <g transform="translate(483.6 0) scale(1.12 1) translate(-483.6 0)">
+      <text class="c-letter" x="346.1" y="557.8" font-family="Cinzel" font-size="370">V</text>
+    </g>
+  </g>
+  <g id="mountains">
+    <path class="c-accent-s" fill="none" stroke-width="8.5" stroke-linejoin="round" stroke-linecap="round" d="M 441 285 L 452 272 L 466.5 256.8 L 476.1 248.8 L 485.6 253.6 L 504.8 232.9 L 523.9 212.1 L 533.5 201.8 L 543.1 208.1 L 562.2 223.3 L 581.3 239.2 L 590.9 247.2 L 600.5 245.6 L 619.6 261.6 L 629.2 267.1 L 638.8 263.2 L 648.3 266.3 L 667.5 281.5 L 686.6 295.9 L 705.7 305.4 L 724.9 307.8"/>
+    <path class="c-accent-s" fill="none" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round" d="M 562 223 L 574 240 L 559 243 L 573 262 L 558 265 L 570 284 L 556 288"/>
+  </g>
+    <g id="feather" transform="translate(494 572) rotate(-6.67) scale(0.33174) translate(-168 -946)">
+<g id="feather-plume">
     <path class="f-body" d="M 169.2 947.1 L 175.8 939.8 L 182.4 932.5 L 189 925.2 L 195.6 917.9 L 202.2 910.5 L 208.9 903.2 L 215.5 895.9 L 222.2 888.5 L 229 881.2 L 235.7 873.8 L 242.5 866.5 L 249.3 859.1 L 256.1 851.7 L 263 844.3 L 269.9 836.9 L 276.9 829.5 L 283.8 822.1 L 290.9 814.7 L 297.9 807.3 L 305 799.9 L 312.2 792.5 L 319.4 785.1 L 326.7 777.6 L 334 770.2 L 341.3 762.8 L 348.7 755.3 L 356.2 747.9 L 363.7 740.4 L 371.3 733 L 379 725.5 L 386.7 718 L 394.5 710.6 L 402.3 703.1 L 410.2 695.6 L 418.2 688.2 L 429.9 683.9 L 450.3 687.3 L 469.1 689.3 L 486.9 690.2 L 504 690.5 L 520.5 690.1 L 536.4 689.1 L 551.7 687.5 L 566.6 685.4 L 580.9 682.7 L 594.8 679.5 L 608.1 675.7 L 621 671.5 L 633.4 666.7 L 645.3 661.4 L 656.7 655.5 L 667.6 649.2 L 678.1 642.3 L 688.1 634.9 L 697.6 627 L 706.6 618.6 L 715.2 609.7 L 723.4 600.3 L 731.1 590.5 L 738.3 580.1 L 745.2 569.3 L 751.6 558 L 757.6 546.3 L 763.3 534.1 L 768.5 521.5 L 773.4 508.5 L 777.9 495 L 782.1 481.2 L 786 467 L 789.6 452.4 L 792.9 437.5 L 795.9 422.3 L 798.6 406.7 L 801.1 390.8 L 803.4 374.6 L 805.4 358.1 L 807.3 341.3 L 808.9 324.3 L 810.4 307 L 811.7 289.4 L 812.7 271.6 L 813.6 253.4 L 814.1 234.8 L 813.5+0.0j 215.3+0.0j L 811.5-0.0j 213.6-0.0j L 798.7 221.9 L 786.3 230.4 L 774.2 239 L 762.2 247.6 L 750.3 256.1 L 738.6 264.7 L 727 273.2 L 715.6 281.7 L 704.3 290.2 L 693.1 298.7 L 682.1 307.2 L 671.2 315.7 L 660.5 324.2 L 650 332.7 L 639.6 341.3 L 629.4 349.8 L 619.4 358.4 L 609.5 367.1 L 599.9 375.8 L 590.4 384.6 L 581.1 393.4 L 572 402.2 L 563.1 411.2 L 554.4 420.2 L 545.9 429.3 L 537.6 438.4 L 529.5 447.7 L 521.7 457 L 514 466.4 L 506.6 475.9 L 499.3 485.5 L 492.3 495.2 L 485.5 505 L 478.9 515 L 472.6 525 L 466.4 535.1 L 460.5 545.3 L 454.7 555.7 L 449.2 566.1 L 444 576.7 L 438.9 587.4 L 434 598.2 L 429.4 609.1 L 425 620.2 L 420.9 631.5 L 417.1 642.9 L 413.6 654.6 L 410.7 666.8 L 404.9 676.3 L 397.9 684.6 L 390.9 692.9 L 383.9 701.1 L 377 709.3 L 370 717.5 L 363.1 725.6 L 356.2 733.6 L 349.2 741.6 L 342.3 749.6 L 335.5 757.5 L 328.6 765.4 L 321.7 773.2 L 314.9 781 L 308.1 788.8 L 301.3 796.5 L 294.5 804.2 L 287.7 811.9 L 280.9 819.5 L 274.1 827.1 L 267.4 834.7 L 260.7 842.2 L 253.9 849.7 L 247.2 857.2 L 240.5 864.7 L 233.8 872.1 L 227.2 879.6 L 220.5 887 L 213.9 894.4 L 207.2 901.7 L 200.6 909.1 L 194 916.4 L 187.4 923.7 L 180.8 931 L 174.2 938.3 L 167.6 945.6 Z" opacity="0.55"/>
     <g id="feather-barbs">
       <path class="f-barb" stroke-width="6.18" d="M 401.2 687.2 Q 407.5 690 414.3 690.5"/>
@@ -155,5 +174,18 @@
     <ellipse class="f-teal" cx="616.4" cy="528.4" rx="39" ry="50" opacity="1.0"/>
     <ellipse class="f-dark" cx="616.4" cy="528.4" rx="19" ry="26" opacity="1.0"/>
     <ellipse class="f-gold" cx="611.4" cy="520.4" rx="5" ry="7" opacity="0.85"/>
+  </g>
+    </g>
+  <g id="wordmark">
+    <text class="c-letter" x="98.98 515.23" y="656.3" font-family="Cinzel" font-size="88.24" xml:space="preserve">AV</text>
+    <text class="c-letter" x="167.02 227.42 288.73 349.13 387.73 436.39 585.74 614.71 666.11 714.77 778.89 831.7 860.67" y="656.3" font-family="Cinzel" font-size="70.3" xml:space="preserve">UGUSTEIKTORIA</text>
+  </g>
+  <g id="subline">
+    <text class="c-accent-t" x="277.09 310.27 368.72 427.18 481.14 531.81 564.99 609.28 642.46 689.85" y="724.1" font-family="Montserrat" font-weight="400" font-size="38.7" xml:space="preserve">IMMOBILIEN</text>
+    <rect class="c-accent" x="133.2" y="708.1" width="107.6" height="3.2"/>
+    <rect class="c-accent" x="756.8" y="708.1" width="108.4" height="3.2"/>
+  </g>
+  <g id="tagline">
+    <text class="c-accent-t" x="230.13 256.71 276.78 300.13 353.07 373.95 392.11 439.8 463.16 486.04 536.32 556.38 567.96 623.62 643.16 666.04 689.4 710.28 733.16 751.87" y="791.9" font-family="Montserrat" font-weight="300" font-size="22.7" xml:space="preserve">MEHRALSNUREINZUHAUSE</text>
   </g>
 </svg>

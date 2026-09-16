@@ -54,15 +54,18 @@ def normal(t: float) -> tuple[float, float]:
 # Half-width of the plume envelope along the shaft. Narrow at the quill, widest
 # just past the eye, then closing to a soft tip.
 def half_width(t: float) -> float:
-    if t < 0.26:                       # bare quill
-        return 2.0 + 16.0 * (t / 0.26) ** 2.6
-    u = (t - 0.26) / 0.74
-    # widest a little past mid-plume, closing to a soft point at the tip
-    return 18.0 + 140.0 * math.sin(math.pi * u ** 0.74) ** 1.05
+    # A long bare quill, then a compact plume in the upper half of the shaft.
+    # The reference feather is exactly this: gold quill hugging the V's right
+    # stroke, plume fanning up and away from it.
+    if t < 0.42:                       # bare quill
+        return 1.6 + 12.0 * (t / 0.42) ** 3.0
+    u = (t - 0.42) / 0.58
+    return 2.0 + 182.0 * math.sin(math.pi * u ** 0.88) ** 0.92
 
 
-EYE_T = 0.735                          # where the eye sits along the shaft
-EYE_OFF = 34.0                         # offset from the shaft, to the upper side
+BACK = 0.34          # how far the plume reaches back over the quill
+EYE_T = 0.675                          # where the eye sits along the shaft
+EYE_OFF = 56.0                         # offset from the shaft, to the upper side
 
 
 def eye_centre() -> tuple[float, float]:
@@ -85,7 +88,7 @@ def envelope_path() -> str:
         nx, ny = normal(t)
         w = half_width(t)
         upper.append((x + nx * w, y + ny * w))
-        lower.append((x - nx * w * 0.86, y - ny * w * 0.86))
+        lower.append((x - nx * w * BACK, y - ny * w * BACK))
     pts = upper + lower[::-1]
     d = f"M {fmt(pts[0][0])} {fmt(pts[0][1])}"
     for x, y in pts[1:]:
@@ -96,14 +99,14 @@ def envelope_path() -> str:
 def barbs() -> list[tuple[str, float]]:
     """Tapered barb strokes radiating from the shaft. Returns (path_d, width)."""
     out = []
-    n = 74
+    n = 66
     for i in range(n):
-        t = 0.245 + (1.0 - 0.245) * (i / (n - 1)) ** 0.94
+        t = 0.405 + (1.0 - 0.405) * (i / (n - 1)) ** 0.94
         bx, by = bezier(t)
         nx, ny = normal(t)
         tx, ty = tangent(t)
         w = half_width(t)
-        for side, shrink in ((1.0, 1.0), (-1.0, 0.86)):
+        for side, shrink in ((1.0, 1.0), (-1.0, BACK)):
             # Barbs sweep forward, towards the tip.
             lead = 0.42 + 0.26 * t
             length = w * shrink * 0.97
@@ -112,7 +115,7 @@ def barbs() -> list[tuple[str, float]]:
             cx = bx + (nx * side * length * 0.55) + tx * length * lead * 0.34
             cy = by + (ny * side * length * 0.55) + ty * length * lead * 0.34
             d = (f"M {fmt(bx)} {fmt(by)} Q {fmt(cx)} {fmt(cy)} {fmt(ex)} {fmt(ey)}")
-            out.append((d, round(1.8 + 3.4 * math.sin(math.pi * t) ** 1.2, 2)))
+            out.append((d, round(2.2 + 4.2 * math.sin(math.pi * t) ** 1.2, 2)))
     return out
 
 
@@ -139,7 +142,7 @@ def build_full() -> str:
         "    .f-teal{fill:%s}" % C["teal"],
         "  </style>",
         f'  <g id="feather-plume">',
-        f'    <path class="f-body" d="{envelope_path()}" opacity="0.22"/>',
+        f'    <path class="f-body" d="{envelope_path()}" opacity="0.55"/>',
     ]
     bs = barbs()
     parts.append('    <g id="feather-barbs">')
@@ -152,11 +155,11 @@ def build_full() -> str:
     # ---- the eye: concentric ovals, largest first
     parts.append(f'  <g id="feather-eye" transform="rotate({ang:.1f} {ex:.1f} {ey:.1f})">')
     for rx, ry, cls, op in (
-        (84, 104, "f-gold", 1.0),
-        (68, 86, "f-dark", 1.0),
-        (50, 64, "f-body", 1.0),
-        (34, 45, "f-teal", 1.0),
-        (17, 24, "f-dark", 1.0),
+        (96, 116, "f-gold", 1.0),
+        (79, 96, "f-dark", 1.0),
+        (58, 72, "f-body", 1.0),
+        (39, 50, "f-teal", 1.0),
+        (19, 26, "f-dark", 1.0),
     ):
         parts.append(f'    <ellipse class="{cls}" cx="{ex:.1f}" cy="{ey:.1f}" '
                      f'rx="{rx}" ry="{ry}" opacity="{op}"/>')
@@ -173,11 +176,11 @@ def build_1c() -> str:
     ex, ey = eye_centre()
     ang = math.degrees(math.atan2(*reversed(tangent(EYE_T)))) + 90.0
     # eye ring as an even-odd hole: approximate the ellipse with two arcs
-    rx, ry = 62.0, 79.0
+    rx, ry = 72.0, 89.0
     ring = (f"M {ex - rx:.1f} {ey:.1f} "
             f"a {rx} {ry} 0 1 0 {2 * rx} 0 "
             f"a {rx} {ry} 0 1 0 {-2 * rx} 0 Z")
-    irx, iry = 44.0, 57.0
+    irx, iry = 52.0, 65.0
     inner = (f"M {ex - irx:.1f} {ey:.1f} "
              f"a {irx} {iry} 0 1 0 {2 * irx} 0 "
              f"a {irx} {iry} 0 1 0 {-2 * irx} 0 Z")
