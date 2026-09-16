@@ -127,7 +127,7 @@ def not_for_print(mw: float, mh: float) -> str:
             f'fill="#B4231F"/>'
             f'<text x="{mw / 2:.3f}" y="{mh - 1.4:.3f}" font-family="Montserrat" '
             f'font-size="2.5" font-weight="600" fill="#FFFFFF" text-anchor="middle" '
-            f'letter-spacing="0.5">NOT FOR PRINT — unfilled [PLACEHOLDERS], '
+            f'letter-spacing="0.5">NOT FOR PRINT — client data not filled in, '
             f'see AV-Brand-Kit/README.md</text></g>')
 
 

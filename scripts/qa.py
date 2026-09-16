@@ -145,12 +145,14 @@ def check_renders() -> None:
 # ------------------------------------------------------------------ 7 placeholders
 PLACEHOLDER = re.compile(r"\[[A-ZÄÖÜ][^\]\n]{2,60}\]|\{\{[A-Za-z_][A-Za-z0-9_]*\}\}")
 SEARCH_EXT = {".svg", ".md", ".txt", ".html", ".json", ".xml", ".webmanifest"}
+DOC_FILES = {"README.md", "README_PDFX4.md"}   # these *document* placeholders
 
 
 def check_placeholders() -> None:
     found: dict[str, set[str]] = {}
     for p in KIT.rglob("*"):
-        if not p.is_file() or p.suffix.lower() not in SEARCH_EXT:
+        if (not p.is_file() or p.suffix.lower() not in SEARCH_EXT
+                or p.name in DOC_FILES):
             continue
         try:
             text = p.read_text(errors="ignore")

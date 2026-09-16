@@ -1,3 +1,5 @@
 # build scratch
 __pycache__/
 *.pyc
+AV-Brand-Kit_v1.zip
+assets/_tmp/
