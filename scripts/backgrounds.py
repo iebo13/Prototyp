@@ -45,11 +45,11 @@ def _ridge_points(w: float, h: float, baseline: float, amp: float,
 
 
 def make(name: str, w: int, h: int, *, ridge: str = "corner",
-         grain: float = 5.0, seed: int = 7) -> pathlib.Path:
+         grain: float = 5.0, seed: int = 7, light: bool = False) -> pathlib.Path:
     """ridge: 'corner' (bottom-right), 'bottom' (full width), 'none'."""
     from PIL import Image, ImageDraw, ImageFilter
 
-    base = _hex(L.C["green"])
+    base = _hex(L.C["cream"] if light else L.C["green"])
     img = Image.new("RGB", (w, h), base)
 
     # --- paper grain: low-amplitude noise, blurred so it reads as texture not dither
@@ -72,8 +72,10 @@ def make(name: str, w: int, h: int, *, ridge: str = "corner",
     gd = ImageDraw.Draw(glow)
     gd.ellipse([-w * 0.25, -h * 0.35, w * 1.25, h * 1.35], fill=26)
     glow = glow.filter(ImageFilter.GaussianBlur(min(w, h) * 0.12))
-    img = Image.composite(Image.new("RGB", (w, h), tuple(min(255, c + 14) for c in base)),
-                          img, glow)
+    lift = -10 if light else 14
+    img = Image.composite(
+        Image.new("RGB", (w, h), tuple(max(0, min(255, c + lift)) for c in base)),
+        img, glow)
 
     # --- gold hairline mountains
     if ridge != "none":
@@ -90,6 +92,8 @@ def make(name: str, w: int, h: int, *, ridge: str = "corner",
                                 x0=-w * 0.04, x1=w * 1.04)
             width = max(2, round(min(w, h) * 0.0026))
             alpha = 52
+        if light:
+            alpha = min(255, alpha + 60)
         d.line(pts, fill=(*gold, alpha), width=width, joint="curve")
         # a second, fainter ridge behind, for depth
         back = [(x - w * 0.10, y - (pts[0][1] - min(p[1] for p in pts)) * 0.22)
@@ -111,7 +115,9 @@ def main() -> None:
     make("bg_wide_2048x1152", 2048, 1152, ridge="corner", seed=23)   # P2 16:9
     make("bg_story_1080x1920", 1080, 1920, ridge="bottom", seed=31)  # P3 9:16
     make("bg_hero_2400x1000", 2400, 1000, ridge="corner", seed=47)   # P4 21:9
-    make("bg_expose_1800x2400", 1800, 2400, ridge="bottom", seed=59) # P5 3:4
+    # P5 describes a bright interior, so the expose ground is cream, not green
+    make("bg_expose_1800x2400", 1800, 2400, ridge="bottom", seed=59,
+         light=True, grain=3.5)
 
 
 if __name__ == "__main__":
